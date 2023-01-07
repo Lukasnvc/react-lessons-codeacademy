@@ -1,0 +1,13 @@
+.board {
+  padding: 10px;
+  border: 2px solid rgb(45, 92, 109);
+  background-color: rgb(145, 180, 192);
+  border-radius: 5px;
+  width: fit-content;
+  margin: 50px;
+}
+
+.board-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}

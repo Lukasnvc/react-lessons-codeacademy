@@ -1,0 +1,29 @@
+.game {
+  display: flex;
+  margin: 50px;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.game-info {
+  border: 2px solid rgb(219, 222, 52);
+  background-color: rgb(238, 239, 194);
+  border-radius: 5px;
+  width: 300px;
+  margin: 50px;
+  padding: 10px;
+}
+
+.btn {
+  border: none;
+  background-color: rgb(15, 144, 213);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: 5px 0;
+}
+
+.btn:hover {
+  cursor: pointer;
+  color: black;
+}

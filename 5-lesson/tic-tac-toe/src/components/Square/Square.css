@@ -1,0 +1,12 @@
+.square {
+  width: 80px;
+  height: 80px;
+  font-size: 2rem;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.square:hover {
+  cursor: pointer;
+  background-color: rgb(148, 213, 219);
+}
