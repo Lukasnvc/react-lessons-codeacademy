@@ -2,37 +2,43 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.btn {
+  width: fit-content;
+  color: whitesmoke;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin: 10px 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+span {
+  margin: 5px 0;
+  font-size: 0.7rem;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.hero {
+  background-image: url("https://img.freepik.com/free-photo/grunge-paint-background_1409-1337.jpg?w=2000");
+  width: 100vw;
+  height: 15vh;
+  padding: 20px;
+  color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.cards {
+  width: 90vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 50px auto;
+  gap: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cards>div {
+  background-color: rgb(210, 206, 206);
+  padding-bottom: 10px;
+}
+
+img {
+  width: 100%;
 }
