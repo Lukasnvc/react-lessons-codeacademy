@@ -31,8 +31,8 @@ const Cards = () => {
     <div className="cards">
       {array.map((item, index) => (
         <div className="card">
-          <img key={index} src={item.img} alt="img" />
-          <span key={index}>{item.text}</span>
+          <img key={index + item.text} src={item.img} alt="img" />
+          <span key={item.text}>{item.text}</span>
         </div>
       ))}
     </div>

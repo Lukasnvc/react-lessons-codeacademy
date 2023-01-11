@@ -10,6 +10,7 @@ const Avatar = ({ color, children }) => {
         width: "fit-content",
         color: "white",
         borderRadius: "100%",
+        display: "inline-block",
       }}>
       {children}
     </div>

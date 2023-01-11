@@ -1,0 +1,76 @@
+.card {
+  width: 90vw;
+  display: flex;
+  align-items: center;
+}
+
+img {
+  width: 70%;
+  margin-right: 40px;
+}
+
+.aside {
+ width: 30%;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.title, .price {
+  text-align: start;
+}
+
+.arrow {
+  padding: 5px 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.description {
+  display: block;
+  margin-bottom: 50px;
+  text-align: start;
+}
+
+.forDesc:nth-last-child(2) {
+  margin-bottom: 5px;
+}
+
+.availability {
+  color: rgb(0, 171, 3);
+  font-weight: 400;
+  margin-left: 5px;
+}
+
+h3 {
+  text-align: start;
+}
+
+.count {
+  display: flex;
+}
+
+.btnCount, .showCount {
+  padding: 6px;
+  border: 1px solid grey;
+  font-size: 1.1rem;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.bottom {
+  display: flex;
+  width: fit-content;
+  justify-content: start;
+  align-items: center;
+  padding-bottom: 30px;
+  border-bottom: 1px solid grey;
+}
+
+.category {
+  text-align: start;
+  font-weight: 400;
+}
