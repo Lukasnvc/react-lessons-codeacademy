@@ -18,7 +18,7 @@ const ProductsList = ({ arr }) => {
           <img src={item.pic} alt="pic" />
           <span className="name">{item.name}</span>
           <h1 className="price">&euro;{item.price}</h1>
-          <button onClick={() => onRemove(item.id)}>> Istrinti</button>
+          <button onClick={() => onRemove(item.id)}>Istrinti</button>
         </div>
       ))}
     </div>
