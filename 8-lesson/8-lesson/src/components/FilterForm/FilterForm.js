@@ -3,25 +3,31 @@ import { arr } from "./arr.js";
 import { useState } from "react";
 
 const FilterForm = () => {
-  const [fruits, setFruits] = useState(arr);
+  const [input, setInput] = useState("");
   const search = (e) => {
     const value = e.target.value;
-
-    const found = fruits.filter((fruit) => fruit.item.includes(value));
-    console.log(value, value.length, fruits, fruits.length);
-    setFruits(found);
-    value.length === 0 && setFruits(arr);
+    setInput(value);
   };
+
+  const found = input.length
+    ? arr.filter((fruit) => fruit.item.includes(input))
+    : arr;
+
   return (
     <div>
-      <h1>Fruit List</h1>
-      <label htmlFor="search"></label>
-      <input type="text" name="search" onChange={search} />
-      <ul>
-        {fruits.map((item, index) => (
-          <li key={index}>{item.item}</li>
-        ))}
-      </ul>
+      <div>
+        <h1>Fruit List</h1>
+
+        <label htmlFor="search"></label>
+
+        <input type="text" name="search" onInput={search} />
+
+        <ul>
+          {found.map((item) => (
+            <li key={item.item}>{item.item}</li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };
