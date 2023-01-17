@@ -1,0 +1,41 @@
+
+.card-wheather {
+  font-family: "Roboto";
+  font-size: 0.9rem;
+  padding: 30px;
+  width: fit-content;
+  border-radius: 5px;
+  text-align: center;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background:rgba(127, 172, 187, 0.816);
+
+  .weather-time-zone {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  .weather-date {
+    margin-top: 4px;
+    margin-bottom: 20px;
+  }
+
+  .weather-temp, .weather-wind-speed {
+    margin: 0 auto;
+    padding: 0px;
+    font-size: 1.3rem;
+  }
+
+  .weather-icon {
+    /* From https://css.glass */
+background: rgba(255, 255, 255, 0.2);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+ 
+}
