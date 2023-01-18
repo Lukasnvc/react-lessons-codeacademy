@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { WeatherApi } from "../../api/Weather";
+import StyledComponent from "../../components/styleComponent/StyledComponent";
 import WeatherCard from "../../components/weatherCard/WeatherCard";
 
 const HomePage = () => {
@@ -16,10 +17,11 @@ const HomePage = () => {
   }, []);
   return (
     <div>
-      Hello
+      TITULINIS
       <div className="weatherCard">
         {weather && <WeatherCard weather={weather} />}
       </div>
+      <StyledComponent />
     </div>
   );
 };

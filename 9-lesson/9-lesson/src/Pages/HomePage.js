@@ -8,7 +8,7 @@ const HomePage = () => {
   return (
     <div>
       <Toolbar />
-      <h1>Home page</h1>
+      <h1>TITULINIS</h1>
       <ul>
         {cars.map((car) => (
           <Link key={car.id} to={`/cars/${car.id}`}>
