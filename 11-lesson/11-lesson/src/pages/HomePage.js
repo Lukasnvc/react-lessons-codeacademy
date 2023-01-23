@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import { GetPets } from "../../api/getPets";
-import ListCard from "../../components/listCard/ListCard";
+import { GetPets } from "../api/getPets";
+import ListCard from "../components/listCard/ListCard";
 import {
   MainContainer,
   Top,
@@ -9,18 +9,19 @@ import {
   BtnContain,
   ListContainer,
   PetCard,
-} from "../../components/listStyledComponent";
-import { Button } from "../../components/button/Button";
+} from "../components/listStyledComponent";
+import { Button } from "../components/button/Button";
 import { Link } from "react-router-dom";
-import { DeletePets } from "../../api/deletePets";
+import { DeletePets } from "../api/deletePets";
+import useDocumentTitle from "../components/title/title";
 
 const HomePage = () => {
+  useDocumentTitle("Vet page");
   const getData = () => {
     fetch(GetPets)
       .then((resp) => resp.json())
       .then((data) => {
         setList(data);
-        console.log(data);
       })
       .catch((err) => console.err(err));
   };
@@ -35,7 +36,6 @@ const HomePage = () => {
       method: "DELETE",
     }).then((res) => {
       res.json().then((resp) => {
-        console.warn(resp);
         getData();
       });
     });
@@ -57,12 +57,19 @@ const HomePage = () => {
                 name={item.name}
                 dob={item.dob}
                 description={item.description}
-                mail={item.mail}
+                mail={item.client_email}
               />
               <BtnContain>
-                <Button>VIEW LOGS</Button>
                 <Button
-                  backgroundColor="white"
+                  as={Link}
+                  to={`/pet/${item.id}`}
+                  state={{
+                    name: item.name,
+                  }}>
+                  VIEW LOGS
+                </Button>
+                <Button
+                  background="white"
                   color="orange"
                   onClick={() => deleteHandle(item.id)}>
                   DELETE

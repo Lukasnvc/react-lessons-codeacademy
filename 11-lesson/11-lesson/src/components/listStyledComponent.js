@@ -35,3 +35,40 @@ export const PetCard = styled.div`
   border-radius: 5px;
   color: grey;
 `;
+
+export const AddPetForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid lightcyan;
+  border-radius: 8px;
+  padding: 20px;
+`;
+
+export const Input = styled.input`
+  padding: 0.5em;
+  margin: 0.5em;
+  color: palevioletred;
+  background: papayawhip;
+  border: none;
+  border-radius: 3px;
+  width: 300px;
+  margin-bottom: 30px;
+`;
+
+export const Label = styled.label`
+  color: grey;
+  font-style: italic;
+`;
+
+export const Select = styled.select`
+  padding: 0.5em;
+  margin: 0.5em;
+  color: palevioletred;
+  background: papayawhip;
+  border: none;
+  border-radius: 3px;
+  width: 300px;
+  margin-bottom: 30px;
+`;

@@ -1,18 +1,20 @@
 import styled from "styled-components";
-import { GetMeds } from "../../api/getMeds";
+import { GetMeds } from "../api/getMeds";
 import { useState, useEffect } from "react";
-import { Button } from "../../components/button/Button";
-import ListCard from "../../components/listCard/ListCard";
+import ListCard from "../components/listCard/ListCard";
 import {
   MainContainer,
   Top,
   Title,
-  BtnContain,
   ListContainer,
   PetCard,
-} from "../../components/listStyledComponent";
+} from "../components/listStyledComponent";
+import useDocumentTitle from "../components/title/title";
+import { Button } from "../components/button/Button";
+import { Link } from "react-router-dom";
 
 const MedsPage = () => {
+  useDocumentTitle("Meds page");
   const [list, setList] = useState(undefined);
   useEffect(() => {
     fetch(GetMeds)
@@ -23,10 +25,16 @@ const MedsPage = () => {
       })
       .catch((err) => console.err(err));
   }, []);
+
   return (
     <MainContainer>
       <Top>
         <Title>Medication List</Title>
+        <div>
+          <Button as={Link} to="/addMeds">
+            ADD MEDICATION
+          </Button>
+        </div>
       </Top>
       <ListContainer>
         {list &&
