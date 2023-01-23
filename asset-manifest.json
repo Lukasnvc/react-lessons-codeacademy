@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/react-lessons-codeacademy/11-lesson/static/css/main.073c9b0a.css",
+    "main.js": "/react-lessons-codeacademy/11-lesson/static/js/main.cc8000d9.js",
+    "static/js/787.e024ed5f.chunk.js": "/react-lessons-codeacademy/11-lesson/static/js/787.e024ed5f.chunk.js",
+    "index.html": "/react-lessons-codeacademy/11-lesson/index.html",
+    "main.073c9b0a.css.map": "/react-lessons-codeacademy/11-lesson/static/css/main.073c9b0a.css.map",
+    "main.cc8000d9.js.map": "/react-lessons-codeacademy/11-lesson/static/js/main.cc8000d9.js.map",
+    "787.e024ed5f.chunk.js.map": "/react-lessons-codeacademy/11-lesson/static/js/787.e024ed5f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.cc8000d9.js"
+  ]
+}
