@@ -1,9 +1,11 @@
 import styled from "styled-components";
 import { DonateContext } from "../contexts/DonateContext";
 import { useContext } from "react";
+import { HeaderContext } from "../contexts/HeaderContext";
 
 const Modal = () => {
   const { donate, toggleDonate } = useContext(DonateContext);
+  const {show, toggleShow} =useContext(HeaderContext)
   if(!donate) return null
   return (
     <Overlay onClick={toggleDonate}>
@@ -16,7 +18,7 @@ const Modal = () => {
           <Content>
             <h1>Donate $20</h1>
             <p>Thank you</p>
-            <DonateBtn>Donate</DonateBtn>
+            <DonateBtn onClick={toggleShow}>Donate</DonateBtn>
           </Content>
           
         </ModalRight>

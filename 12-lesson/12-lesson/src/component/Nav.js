@@ -5,6 +5,7 @@ import { useContext } from "react";
 import { FaSun, FaMoon } from "react-icons/fa";
 import styled from "styled-components";
 import { HeaderContext } from "../contexts/HeaderContext";
+import { NavLink } from "react-router-dom";
 
 const Nav = () => {
   const { darkMode, toggleDarkMode } = useContext(ThemeContext);
@@ -20,13 +21,33 @@ const Nav = () => {
 
         <Switch onClick={toggleDarkMode}>activate</Switch>
       </Container>
+
       {show && <h1>Thanks for your donation</h1>}
       <Switch onClick={toggleDonate}>Donate</Switch>
+      <NavContained>
+        <StyledLink to={"/"}>Home</StyledLink>
+        <StyledLink to={"/contacts"}>Contacts</StyledLink>
+      </NavContained>
     </NavContained>
   );
 };
 
 export default Nav;
+
+const Navigation = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const StyledLink = styled(NavLink)`
+  padding: 2px 5px;
+  margin: 5px;
+  color: white;
+  background-color: blueviolet;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 5px;
+`;
 
 const NavContained = styled.div`
   display: flex;
