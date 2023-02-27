@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { fullName } from "../../utils/string";
+import { fullName, passwordConverter } from "../../utils/string";
 import { User } from "../../api/interfaceUser";
 
 interface UseCardProps { // nes gauname objekte
@@ -8,18 +8,11 @@ interface UseCardProps { // nes gauname objekte
 
 
 const UserCard = ({ user }: UseCardProps) => {
-  
-    const stars = () => {
-    const num = user.password.length
-    const star = '*'
-    const result = star.repeat(num)
-    return result
-}
   return (
     <Container>
       <Email>{user.email}</Email>
       <p>{fullName(user.first_name, user.last_name)}</p>
-      <p>{stars()}</p>
+      <p>{passwordConverter(user.password)}</p>
     </Container>
   )
 }
