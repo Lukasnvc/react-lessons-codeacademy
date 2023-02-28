@@ -1,4 +1,4 @@
 export type Route = {
-  path: string,
+  path: "/" | "/users";
   Component: () => JSX.Element;
-}
+};

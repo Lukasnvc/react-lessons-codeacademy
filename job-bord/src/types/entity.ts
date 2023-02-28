@@ -1,5 +1,5 @@
-export interface EntityMeta {
+export type EntityMeta = {
   id: number;
   createdAt: string;
   updatedAt: string;
-}
+};
